@@ -1,0 +1,138 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.calculator{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 15px;
+    max-width: 500px;
+    width: 500px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column; /* Fixes order so currentNumber is at bottom */
+    align-items: flex-end;
+    padding: 10px;
+    background-color: hsl(0, 0%, 20%);
+    border-radius: 15px 15px 0px 0px;
+}
+
+#previousNumber {
+    width: 100%;
+    font-size: 3rem; /* Smaller size */
+    padding: 5px 20px;
+    text-align: right;
+    border: none;
+    color: hsl(0, 0%, 75%);
+    background: transparent;
+}
+#currentNumber{
+    width: 91.7%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: right;
+    border: none;
+    background-color: hsl(0, 0%, 20%);
+    color:hsl(0, 0%, 95%);
+    /*border: 2px solid blue;*/
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+.keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(0, 0%, 55%);
+    transform: scale(1.05)
+}
+
+button:active{
+    background-color: hsl(0, 0%, 75%);
+}
+
+.operator-btn, .clear, .sign, .modulus, .calculate, .clearEntry{
+    background-color: hsl(33, 100%, 60%);
+}
+
+.operator-btn:hover{
+    background-color: hsl(33, 100%, 70%);
+}
+
+.operator-btn:active{
+    background-color: hsl(33, 100%, 80%);
+}
